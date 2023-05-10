@@ -1,13 +1,42 @@
-import { useState } from 'react'
-import './App.css'
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
-function App() {
+const App: React.FC = () => {
+  const Layout = (): JSX.Element => {
+    return (
+      <div className="App">
+        <Navbar />
+        <Outlet />
+        {/* <Footer /> */}
+      </div>
+    );
+  };
 
-  return (
-    <>
-      
-    </>
-  )
-}
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+      ],
+    },
+    {
+      path: "/register",
+      element: <RegisterPage />,
+    },
+    {
+      path: "/login",
+      element: <LoginPage />,
+    },
+  ]);
 
-export default App
+  return <RouterProvider router={router} />;
+};
+
+export default App;

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
-const Footer: React.FC = () => {
+const RegisterPage: React.FC = () => {
   return <Container></Container>;
 };
 
-export default Footer;
+export default RegisterPage;
 
+// Register styled components
 const Container = styled.div``;
