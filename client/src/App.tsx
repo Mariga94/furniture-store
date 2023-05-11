@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   const Layout = (): JSX.Element => {
@@ -10,7 +11,7 @@ const App: React.FC = () => {
       <div className="App">
         <Navbar />
         <Outlet />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   };
