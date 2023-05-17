@@ -9,9 +9,12 @@ import rectangle40 from "../assets/Rectangle40.jpg";
 import data from "../data";
 
 import Product from "../components/Product";
+import { useParams } from "react-router-dom";
 
 const itemsPerPage = 9;
-const ProductsPage: React.FC = () => {
+const SingleCategoryPage: React.FC = () => {
+  const { categorName } = useParams();
+  const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const totalItems = data.length;
@@ -33,7 +36,7 @@ const ProductsPage: React.FC = () => {
   return (
     <ProductsContainer>
       <Wrapper>
-        <HeaderTitle>Products</HeaderTitle>
+        <HeaderTitle>Tables</HeaderTitle>
         <HeaderParagraph>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, dolorem
           ducimus debitis laboriosam illo molestias eveniet, perspiciatis.
@@ -58,7 +61,7 @@ const ProductsPage: React.FC = () => {
           />
           <SearchButton type="submit">Find Now</SearchButton>
         </FormContainer>
-        <HeaderTitle2>Total Product</HeaderTitle2>
+        <HeaderTitle2>Total Chairs</HeaderTitle2>
         <Container>
           {itemsToDisplay.map((item) => (
             <Product
@@ -68,7 +71,6 @@ const ProductsPage: React.FC = () => {
               name={item.name}
               category={item.category}
               price={item.price}
-              
             />
           ))}
         </Container>
@@ -90,7 +92,7 @@ const ProductsPage: React.FC = () => {
   );
 };
 
-export default ProductsPage;
+export default SingleCategoryPage;
 
 const ProductsContainer = styled.header`
   background: #f9f9f9;

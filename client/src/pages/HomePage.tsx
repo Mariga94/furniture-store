@@ -6,12 +6,12 @@ const HomePage: React.FC = () => {
   return (
     <HeaderContainer>
       <Wrapper>
-        <Title>Discover Furniture with High Quality Wood</Title>
+        <Title>
+        "Furnish Your Dreams with Our Stunning Selection"
+        </Title>
         <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-          similique est illum, sit error nemo doloremque quo cumque ipsa magnam
-          ex optio quia quibusdam tempore ipsam dolorum hic? Amet,
-          exercitationem.
+        "Transform Your Space with Timeless Elegance: Discover Exquisite
+          Furniture for Every Style and Budget!"
         </Paragraph>
         <HeroImage src={hero} alt="Hero Image" />
       </Wrapper>
@@ -79,7 +79,7 @@ const Title = styled.h1`
   line-height: 5.2rem;
   text-align: center;
   color: #000;
-  margin-top: 100px;
+  // margin-top: 100px;
   margin-bottom: 0;
   width: 824px;
   // height: 166x;
@@ -151,7 +151,6 @@ const CardContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-bottom: 180px;
-  
 `;
 const Card = styled.div`
   display: flex;
