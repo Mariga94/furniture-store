@@ -3,6 +3,11 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+  --color-black: #151411;
+  --text-color: var(--color-black);
+  --line-color: #f3f3f3;
+  --paragraph-color: #afadb5;
+  --placeholder-color: #f9f9f9;
 }
 
 * {
@@ -15,13 +20,64 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-color);
 }
 
 body {
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul > li {
+  
+}
+
+h2 {
+  font-size: 2.75rem;
+}
+
+p {
+  color: var(--paragraph-color);
+  font-size: 1.25rem;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.container {
+  padding: 0 6.25rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
 }

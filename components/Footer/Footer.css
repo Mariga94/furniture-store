@@ -1,0 +1,14 @@
+.footer {
+    gap: 6rem;
+    padding-top: 5rem;
+    border-top: 2px solid #ECE4DE;
+    margin: 5.5rem 0;
+}
+
+.footer > section {
+    color: var(--text-color);
+}
+
+.footer-nav {
+    gap: 0.75rem;
+}
