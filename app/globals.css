@@ -6,6 +6,7 @@
   --color-black: #151411;
   --text-color: var(--color-black);
   --line-color: #f3f3f3;
+  --main-color: #518581;
   --paragraph-color: #afadb5;
   --placeholder-color: #f9f9f9;
 }
@@ -99,4 +100,19 @@ a {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.btn {
+  width: 17.8125rem;
+  height: 3.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--main-color);
+  color: #fff;
 }
