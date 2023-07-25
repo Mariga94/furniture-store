@@ -3,17 +3,14 @@
 }
 
 .title {
-  color: var(--text-color);
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 5.2rem;
-  margin-bottom: 1.88rem;
+  
 }
 
 .title-para {
   line-height: 2rem;
+  text-align: center;
   color: var(--paragraph-color);
+  width: 49.75rem;
 }
 
 .hero-image {

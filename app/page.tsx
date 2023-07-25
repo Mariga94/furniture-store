@@ -14,7 +14,7 @@ export default function Home() {
         initial={{ translateY: -50, scale: 0.5, opacity: 0 }}
         animate={{ translateY: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="content flex-col align-center"
+        className="content flex-col align-center " 
       >
         <h1 className="title">Discover Furniture With High Quality Wood</h1>
         <p className="title-para">
