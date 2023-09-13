@@ -7,9 +7,11 @@ import {
   CheckoutPage,
   CartPage,
 } from "./Pages";
+import { Footer, Navbar } from "./Components";
 function App() {
   return (
     <BrowserRouter>
+    <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -18,6 +20,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </main>
+      <Footer/>
     </BrowserRouter>
   );
 }

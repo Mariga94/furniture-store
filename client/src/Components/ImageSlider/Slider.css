@@ -1,0 +1,9 @@
+.carousel-image_container{
+    height: 37rem;
+    background-color: rebeccapurple;
+}
+
+.carousel-image_container > img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,86 @@
+.product-list {
+  min-height: 100vh;
+  gap: 3rem;
+}
+
+.section-heading {
+  gap: 1.25rem;
+}
+
+.section-heading > p {
+  color: var(--paragraph-color);
+}
+
+.carousel-image {
+  height: 500px;
+  width: 100%;
+}
+
+.search-filter-section > form {
+  width: 64rem;
+}
+
+.search-filter-section > form > input {
+  width: 70%;
+}
+
+.search-filter-section > form > button {
+  width: 20%;
+}
+
+.product-grid_heading {
+  gap: 0.5rem;
+}
+
+.product-grid {
+  gap: 3rem;
+}
+
+.product-grid_heading > .furniture-count {
+  display: flex;
+  background-color: var(--placeholder-color, green);
+  padding: 0.625rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.25rem;
+}
+
+.product-grid-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.0rem;
+}
+
+.product-grid-content {
+  padding: 1rem 1rem;
+  justify-content: start;
+}
+
+.product-content {
+  gap: 2rem;
+}
+
+.category-search {
+  width: 23%;
+  gap: 1rem;
+}
+
+.category-search > h3 {
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  margin-bottom: 1rem;
+}
+
+.category-search > .search {
+  width: 20.59375rem;
+  padding: 1.03125rem 0.75rem 1.03125rem 1.25rem;
+}
+
+.pagination {
+  gap: 1rem;
+}
+
+.page-item.active button {
+  background-color: var(--primary-color);
+  color: #fff;
+}

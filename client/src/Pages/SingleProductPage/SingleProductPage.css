@@ -1,0 +1,21 @@
+.single-product_page {
+  min-height: 100svh;
+}
+
+.single-product_page-section {
+    gap: 5rem;
+}
+
+
+.single-product_page > section {
+    flex: 1;
+}
+
+.single-product_info {
+  gap: 0.94rem;
+}
+
+.button-container {
+  gap: 1.25rem;
+}
+
