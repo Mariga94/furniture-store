@@ -15,6 +15,7 @@
   --mailist-color: #f2f5ff;
   --primary-color: #03344f;
   --placeholder-color: #f9f9f9;
+  --error-color: #ff3333;
 }
 
 body {
@@ -114,6 +115,9 @@ input[type="text"] {
   transition: border-color 0.3s ease;
 }
 
+input:focus-visible {
+  outline: 2px solid var(--primary-color);
+}
 input:placeholder-shown {
   font-style: italic;
 }
@@ -140,4 +144,26 @@ button {
 .input-wrapper {
   gap: 0.5rem;
   width: 100%;
+}
+
+input.input-error,
+input.input-error:focus-visible {
+  outline: 1px solid var(--error-color);
+}
+
+@media screen and (max-width: 768px) {
+  .outer-padding {
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .outer-padding {
+    padding-left: 1.2rem;
+    padding-right: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }

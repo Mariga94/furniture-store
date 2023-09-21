@@ -2,15 +2,15 @@ import React from "react";
 import "./Footer.css";
 const Footer = () => {
   return (
-    <div className="footer outer-padding flex-row justify-space_between">
-      <section className="flex-col footer-section_left">
+    <div className="footer outer-padding ">
+      <section className="footer-section_left">
         <h2 className="footer-title">Furniture</h2>
         <p className="footer-paragraph">
           Furniture is an online retailer that fulfills demand by offering a
           wide selection of high-quality, exemplary designed furniture.
         </p>
       </section>
-      <section className="footer-section_right flex-row">
+      <section className="footer-section_right">
         <ul className="flex-col">
           <h3>Product</h3>
           <li>New Arrivals</li>

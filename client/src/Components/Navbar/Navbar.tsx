@@ -32,7 +32,7 @@ const Navbar = () => {
   // }, [showProfileModal]);
 
   return (
-    <div className="navbar outer-padding flex-row justify-space_between align-center">
+    <div className="navbar outer-padding ">
       <NavLink to="/">
         <h2>Furniture</h2>
       </NavLink>

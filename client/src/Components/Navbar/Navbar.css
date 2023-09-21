@@ -1,9 +1,15 @@
 .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 4rem;
   flex-shrink: 0;
   border-bottom: 2px solid var(--Line-Color, #f3f3f3);
   margin-bottom: 3.7rem;
 }
+
+/* flex-row justify-space_between align-center */
 
 .navbar > nav {
   gap: 5rem;
@@ -33,4 +39,32 @@
 .profile-modal.show {
   display: block;
   opacity: 1;
+}
+
+/* Meid query for screens smaller than 76px (tablets) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin-bottom: 3.7rem;
+    justify-content: space-between;
+  }
+  .navbar > nav {
+    /* background-color: rebeccapurple; */
+    gap: 3rem;
+  }
+}
+
+/* Media query for screens smalller than 576px (mobile phones) */
+@media screen and (max-width: 576px) {
+  .navbar {
+    display: block;
+    
+    &nav {
+      background-color: gray;
+    }
+  }
+}
+
+/* Media query for screens larger than 1200px (larger desktops) */
+@media screen and (min-width: 1200px) {
+
 }

@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   HomePage,
-  OrderPage,
   ProductListPage,
   SingleProductPage,
-  CheckoutPage,
+
   CartPage,
   Login,
+  Register,
 } from "./Pages";
 import { Footer, Navbar } from "./Components";
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path="/products/:id" element={<SingleProductPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/" />
+          <Route path="/signup" element={<Register />} />
         </Routes>
       </main>
       <Footer />
