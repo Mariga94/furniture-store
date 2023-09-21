@@ -17,4 +17,20 @@
   font-weight: 500;
   line-height: 1.75rem; /* 186.667% */
   text-transform: capitalize;
+  cursor: pointer;
+}
+
+.profile-modal {
+  display: none;
+  position: absolute;
+  right: 150px;
+  top: 54px;
+  z-index: 1;
+  opacity: 0;
+  transition: display 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile-modal.show {
+  display: block;
+  opacity: 1;
 }
