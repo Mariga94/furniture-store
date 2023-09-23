@@ -1,13 +1,14 @@
-import React from "react";
 import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer outer-padding ">
       <section className="footer-section_left">
-        <h2 className="footer-title">Furniture</h2>
-        <p className="footer-paragraph">
-          Furniture is an online retailer that fulfills demand by offering a
-          wide selection of high-quality, exemplary designed furniture.
+        <h3>Furniture</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam quidem
+          quisquam soluta dolores delectus odit eius expedita modi itaque non
+          in, harum, beatae, minima accusamus quasi ipsam temporibus. Ipsum,
+          veritatis!
         </p>
       </section>
       <section className="footer-section_right">

@@ -151,19 +151,39 @@ input.input-error:focus-visible {
   outline: 1px solid var(--error-color);
 }
 
-@media screen and (max-width: 768px) {
+
+/* Mobile devices (320px - 480px) */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* CSS styles for mobile devices */
   .outer-padding {
-    padding-left: 4.25rem;
-    padding-right: 4.25rem;
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
   }
 }
 
-@media screen and (max-width: 576px) {
+/* iPads, Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* CSS styles for iPads and Tablets */
   .outer-padding {
-    padding-left: 1.2rem;
-    padding-right: 1.1rem;
+    padding-left: 2.0rem;
+    padding-right: 2.0rem;
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* Small screens, laptops (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .outer-padding {
+    padding-left: 2.0rem;
+    padding-right: 2.0rem;
+  }
+}
+
+/* Desktops, large screens (1025px - 1200px) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* CSS styles for desktops and large screens */
+}
+
+/* Extra large screens, TV (1201px and more) */
+@media screen and (min-width: 1201px) {
+  /* CSS styles for extra large screens and TVs */
 }

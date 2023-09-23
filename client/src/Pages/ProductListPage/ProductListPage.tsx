@@ -4,15 +4,21 @@ import image from "../../assets/59a3541665aba6404a176b8b361a16fb.png";
 import { SingleProductCard } from "../../Components";
 import data from "../../data";
 import { Product } from "../../types";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 const ProductListPage = () => {
   const [products, setProducts] = useState<undefined | Product[]>(undefined);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [displayCategories, setDisplayedCategories] = useState(true);
   const productsPerPage: number = 6;
 
   useEffect(() => {
     setProducts(data);
   }, []);
+
+  function handleDisplayCategories() {
+    setDisplayedCategories((prev) => !prev);
+  }
 
   const totalProducts: number = products?.length || 0;
   const totalPages: number = Math.ceil(totalProducts / productsPerPage);
@@ -40,39 +46,68 @@ const ProductListPage = () => {
       <section>
         <img src={image} alt="image" className="carousel-image" />
       </section>
-      <section className="search-filter-section flex-row justify-content_center">
-        <form className="flex-row">
+      {/* <section className="search-filter-section ">
+        <form className="search-filter_form">
           <input type="text" placeholder="Search property" />
           <button className="primary-button">Find Now</button>
         </form>
-      </section>
+      </section> */}
       <section className="product-grid outer-padding flex-col">
         <div className="flex-row align-center product-grid_heading">
           <h2>Total Product</h2>
           <span className="furniture-count">{products?.length}</span>
         </div>
-        <div className="flex-row product-content">
+        <div className="product-content">
           <section className="left category-search flex-col">
             <input type="text" placeholder="Search" className="search" />
-            <h3>Category</h3>
-            <label className="flex-row align-center">
-              <input type="checkbox" name="livingRoom" />
-              LivingRoom
-            </label>
-            <label className="flex-row align-center">
-              <input type="checkbox" name="bedRoom" />
-              BedRoom
-            </label>
-            <label className="flex-row align-center">
-              <input type="checkbox" name="diningRoom" />
-              Dining Room
-            </label>
-            <label className="flex-row align-center">
-              <input type="checkbox" name="office" />
-              Office
-            </label>
+            <h3
+              className="flex-row align-center justify-space_between"
+              onClick={handleDisplayCategories}
+            >
+              Category
+              <FontAwesomeIcon
+                icon={displayCategories ? faAngleUp : faAngleDown}
+                style={{ fontSize: "0.7rem" }}
+              />
+            </h3>
+            <div
+              className={`category-list ${displayCategories ? "active" : ""}`}
+            >
+              <label className="flex-row align-center">
+                <input
+                  type="checkbox"
+                  className="category-checkbox"
+                  name="livingRoom"
+                />
+                LivingRoom
+              </label>
+              <label className="flex-row align-center">
+                <input
+                  type="checkbox"
+                  className="category-checkbox"
+                  name="bedRoom"
+                />
+                BedRoom
+              </label>
+              <label className="flex-row align-center">
+                <input
+                  type="checkbox"
+                  className="category-checkbox"
+                  name="diningRoom"
+                />
+                Dining Room
+              </label>
+              <label className="flex-row align-center">
+                <input
+                  type="checkbox"
+                  className="category-checkbox"
+                  name="office"
+                />
+                Office
+              </label>
+            </div>
           </section>
-          <section className="product-grid-content flex-row right">
+          <section className="product-grid-content right">
             {currentProducts?.map((product: Product) => {
               return (
                 <div key={product.id}>
@@ -84,11 +119,11 @@ const ProductListPage = () => {
         </div>
       </section>
       <section className="outer-padding flex-row align-center justify-content_center">
-      <ul className="pagination flex-row">
+        <ul className="pagination flex-row">
           {Array.from({ length: totalPages }, (_, i) => (
             <li
               key={i + 1}
-              className={`page-item ${currentPage === i + 1 ? 'active' : ''}`}
+              className={`page-item ${currentPage === i + 1 ? "active" : ""}`}
             >
               <button
                 className="page-link"

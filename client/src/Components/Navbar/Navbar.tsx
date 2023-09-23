@@ -1,42 +1,32 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
-import { useState, useRef, } from "react";
+import { useState, useRef } from "react";
 import { NavbarModal } from "..";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const [showProfileModal, setShowProfileModal] = useState<boolean>(false);
+  const [isShowNavbar, setIsShowNavbar] = useState<boolean>(false);
   const modalRef = useRef(null);
 
   const handleShowProfileModal = () => {
     setShowProfileModal((prev) => !prev);
   };
 
-  // Close the modal when a click occurs outside of it
-  // const handleDocumentClick = (e: MouseEvent) => {
-  //   if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-  //     setShowProfileModal(false);
-  //   }
-  // };
- 
-  // useEffect(() => {
-  //   if (showProfileModal) {
-  //     window.addEventListener("click", handleDocumentClick);
-  //   } else {
-  //     window.removeEventListener("click", handleDocumentClick);
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener("click", handleDocumentClick);
-  //   };
-  // }, [showProfileModal]);
+  const showNavbar = () => {
+    setIsShowNavbar((prev) => !prev);
+  };
 
   return (
     <div className="navbar outer-padding ">
-      <NavLink to="/">
+      <div className="hamburger-menu" onClick={showNavbar}>
+        <RxHamburgerMenu className="hamburger-icon" />
+      </div>
+      <NavLink to="/" className="nav-band">
         <h2>Furniture</h2>
       </NavLink>
-      <nav className="flex-row justify-space_between">
+      <nav className={`nav-links${isShowNavbar ? " show" : ""}`}>
         <NavLink to="/" className="nav-link">
           Home
         </NavLink>
@@ -50,7 +40,7 @@ const Navbar = () => {
           Profile
           <AiOutlineUser className="react-icon" />
         </div>
-        <NavLink to="/cart" className="nav-link flex-row align-center">
+        <NavLink to="/cart" className="nav-link flex-row align-center ">
           Cart
           <AiOutlineShoppingCart className="react-icon" />
         </NavLink>

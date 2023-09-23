@@ -19,18 +19,22 @@ const SingleProductCard: React.FC<SingleProductCardProps> = ({ product }) => {
       key={product.id}
       onClick={() => handleClick(product.id)}
     >
-      <img
-        src={product.placeholder_image_url}
-        alt={product.name}
-        className="single-product_image"
-      />
-      <p className="single-product_category">{product.category}</p>
-      <h3 className="single-product_title">{product.name}</h3>
-      <p>{product.short_desc}</p>
-      <h3>
-        {product.currency}
-        {product.price}
-      </h3>
+      <div className="image-container">
+        <img
+          src={product.placeholder_image_url}
+          alt={product.name}
+          className="single-product_image"
+        />
+      </div>
+      <div className="single-product_content">
+        <p className="single-product_category">{product.category}</p>
+        <h3 className="single-product_title">{product.name}</h3>
+        <p>{product.short_desc}</p>
+        <h3>
+          {product.currency}
+          {product.price}
+        </h3>
+      </div>
     </div>
   );
 };

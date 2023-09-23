@@ -7,6 +7,7 @@
 }
 .cart-left {
   width: 70%;
+  border-collapse: collapse;
 }
 
 .cart > table {
@@ -29,10 +30,10 @@ table.cart-left > thead {
   padding: 0 0.88rem;
 }
 
-table.cart-left > thead > tr > *{
-    height: 4.3rem;
-    display: flex;
-    align-items: center;
+table.cart-left > thead > tr > * {
+  height: 4.3rem;
+  display: flex;
+  align-items: center;
 }
 
 .cart-right {
@@ -49,7 +50,113 @@ table.cart-left > thead > tr > *{
   padding: 0rem 0.00875rem 0.73438rem 0rem;
   border-bottom: 1px solid #e9e9e9;
 }
+.cart-left th,
+.cart-left td,
+.cart-left tr,
+.card-left td {
+  text-align: left;
+}
+
 
 .cart-right > button {
   margin-top: 2.55rem;
+}
+
+table.cart-left thead {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Mobile devices (320px - 480px) */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* CSS styles for mobile devices */
+
+  .cart-container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Ensure the container takes up the available width */
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+  }
+  table.cart-left {
+    /* background-color: aliceblue; */
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .cart-left th,
+  .cart-left td {
+    /* padding: 6px; */
+    text-align: left;
+  }
+  .cart-left {
+    font-size: 12px;
+  }
+}
+
+/* iPads, Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* CSS styles for iPads and Tablets */
+  .cart-container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Ensure the container takes up the available width */
+    margin-bottom: 20px;
+    /* background-color: antiquewhite; */
+  }
+  table.cart-left {
+    /* background-color: aliceblue; */
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .cart-left th,
+  .cart-left td {
+    /* padding: 6px; */
+    text-align: left;
+  }
+  .cart-left {
+    font-size: 12px;
+  }
+}
+
+/* Small screens, laptops (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .cart-container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Ensure the container takes up the available width */
+    margin-bottom: 20px;
+    /* background-color: antiquewhite; */
+  }
+  table.cart-left {
+    /* background-color: aliceblue; */
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .cart-left th,
+  .cart-left td {
+    /* padding: 6px; */
+    text-align: left;
+  }
+  .cart-left {
+    font-size: 12px;
+  }
+}
+
+/* Desktops, large screens (1025px - 1200px) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* CSS styles for desktops and large screens */
+}
+
+/* Extra large screens, TV (1201px and more) */
+@media screen and (min-width: 1201px) {
+  /* CSS styles for extra large screens and TVs */
 }
